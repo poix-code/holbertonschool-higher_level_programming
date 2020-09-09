@@ -8,20 +8,18 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp;
-	int i, index, buffer[5000];
+	listint_t *tmp = *head;
+	int arr[5000];
+	int idx, count;
 
-	*tmp = *head;
+	idx = count = 0;
 	if (!*head)
 		return (1);
-	for (index = 0; tmp; index++)
+	for (; tmp; tmp = tmp->next, idx++)
+		arr[idx] = tmp->n;
+	for (; idx > count; idx--, count++)
 	{
-		buffer[index] = tmp->n;
-		tmp = tmp->next;
-	}
-	for (i = 0; idx > i; index--, i++)
-	{
-		if (buffer[index - 1] != buffer[i])
+		if (arr[idx - 1] != arr[count])
 			return (0);
 	}
 	return (1);
