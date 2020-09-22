@@ -24,3 +24,6 @@ The function divides elements by elements 2 lists.
 
 The function raises a type exception.
 
+## 6-raise_exception_msg.py
+
+The function raises a name exception with a message.
