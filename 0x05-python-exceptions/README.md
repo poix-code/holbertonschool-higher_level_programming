@@ -15,3 +15,12 @@ The function prints the first **x** elements of a list and only integers, in saf
 ## 3-safe_print_division.py
 
 The function divides 2 integers and prints the result.
+
+## 4-list_division.py
+
+The function divides elements by elements 2 lists.
+
+## 5-raise_exception.py
+
+The function raises a type exception.
+
