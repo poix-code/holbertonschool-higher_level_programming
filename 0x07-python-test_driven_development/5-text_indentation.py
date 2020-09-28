@@ -6,7 +6,7 @@ Function to replace some characters with '\n\n'
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after some specified characters.
+    Prints a text with 2 new lines after some characters.
     """
 
     if type(text) is not str:
