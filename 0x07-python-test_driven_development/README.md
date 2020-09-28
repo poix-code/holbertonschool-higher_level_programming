@@ -11,3 +11,7 @@ The function divides all elements of a matrix.
 ## 3-say_my_name.py
 
 The function prints **My name is <first name> <last name>**.
+
+## 4-print_square.py
+
+The function prints a square **#**.
