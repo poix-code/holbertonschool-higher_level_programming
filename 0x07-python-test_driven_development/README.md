@@ -19,3 +19,7 @@ The function prints a square **#**.
 ## 5-text_indentation.py
 
 The function prints a text with 2 new lines after each of these characters, **.**, **?** and **:**
+
+## 6-max_integer_test.py
+
+Unittests to the propsed function.
