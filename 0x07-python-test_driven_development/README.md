@@ -15,3 +15,7 @@ The function prints **My name is <first name> <last name>**.
 ## 4-print_square.py
 
 The function prints a square **#**.
+
+## 5-text_indentation.py
+
+The function prints a text with 2 new lines after each of these characters, **.**, **?** and **:**
