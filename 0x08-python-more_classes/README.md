@@ -23,3 +23,19 @@ The class **Rectangle** defines a rectangle by: **3-rectangle.py**
 ## 5-rectangle.py
 
 The class **Rectangle** defines a rectangle by: **4-rectangle.py**
+
+## 6-rectangle.py
+
+The class **Rectangle** defines a rectangle by: **5-rectangle.py**
+
+## 7-rectangle.py
+
+The class **Rectangle** defines a rectangle by: **6-rectangle.py**
+
+## 8-rectangle.py
+
+The class **Rectangle** defines a rectangle by: **7-rectangle.py**
+
+## 9-rectangle.py
+
+The class **Rectangle** defines a rectangle by: **8-rectangle.py**
