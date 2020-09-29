@@ -8,4 +8,6 @@ Empty class **Rectangle** that defines a rectangle.
 
 The class **Rectangle** defines a rectangle by: **0-rectangle.py**
 
-##
+## 2-rectangle.py
+
+The class **Rectangle** defines a rectangle by: **1-rectangle.py**
