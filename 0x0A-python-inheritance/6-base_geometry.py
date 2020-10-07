@@ -5,6 +5,7 @@ Defines the class BaseGeometry
 
 
 class BaseGeometry:
-    """added the method 'area'"""
+    """BaseGeometry"""
     def area(self):
+        """added the method 'area'"""
         raise TypeError("area() is not implemented")
