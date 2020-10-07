@@ -8,4 +8,4 @@ class BaseGeometry:
     """BaseGeometry"""
     def area(self):
         """added the method 'area'"""
-        raise TypeError("area() is not implemented")
+        raise Exception("area() is not implemented")
