@@ -70,3 +70,5 @@ Case #12: Test method 'area()'
 >>> print(bg.area())
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> bg.integer_validator("name", 2)
