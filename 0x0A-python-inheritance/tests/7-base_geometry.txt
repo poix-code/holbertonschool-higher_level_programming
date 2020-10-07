@@ -7,68 +7,68 @@ Test cases for two methods of the class BaseGeometry
 Import module
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Cases to be evaluated:
-
 >>> bg = BaseGeometry()
 
-Case #1: value is type list
->>> bg.integer_validator("name", [1, 1])
-Traceback (most recent call last):
-TypeError: lst must be an integer
+>>> bg.integer_validator("my_int", 12)
 
-Case #2: Value is type string
->>> bg.integer_validator("name", "Tyler")
+>>> bg.integer_validator("width", 89)
+
+Value is not an integer:
+
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-Case #3: Value is type tuple
->>> bg.integer_validator("name", (1 ,1))
-Traceback (most recent call last):
-TypeError: tup must be an integer
-
-Case #4: Value is type float
->>> bg.integer_validator("name", 7.7)
+>>> bg.integer_validator("float", 2.5)
 Traceback (most recent call last):
 TypeError: float must be an integer
 
-Case #5: Value is type None
->>> bg.integer_validator("name", None)
+>>> bg.integer_validator("lst", [1, 2])
+Traceback (most recent call last):
+TypeError: lst must be an integer
+
+>>> bg.integer_validator("tup", (1 ,2))
+Traceback (most recent call last):
+TypeError: tup must be an integer
+
+>>> bg.integer_validator("Nothing", None)
 Traceback (most recent call last):
 TypeError: Nothing must be an integer
 
-Case #6: Value is type boolean
->>> bg.integer_validator("name", True)
+>>> bg.integer_validator("boolean", True)
 Traceback (most recent call last):
 TypeError: boolean must be an integer
 
-Case #7: Value is less than 0
->>> bg.integer_validator("name", -4)
+>>> bg.integer_validator("set", {1, 2})
+Traceback (most recent call last):
+TypeError: set must be an integer
+
+Value is less or equal to 0:
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
-Case #8: Value is 0
->>> bg.integer_validator("name", 0)
-Traceback (most recent call last):
-ValueError: distance must be greater than 0
 
-Case #9: No arguments
->>> bg.integer_validator()
-Traceback (most recent call last):
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+Trying area():
 
-Case #10: Only one argument
->>> bg.integer_validator("name")
-Traceback (most recent call last):
-TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-Case #11: More than two arguments
->>> bg.integer_validator("name", 1, 1)
-Traceback (most recent call last):
-TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-Case #12: Test method 'area()'
 >>> print(bg.area())
 Traceback (most recent call last):
 Exception: area() is not implemented
 
->>> bg.integer_validator("name", 2)
+Wrong number of argument to integer_validator:
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("name", 1, 2)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
