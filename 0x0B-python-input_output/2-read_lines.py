@@ -10,5 +10,8 @@ def read_lines(filename="", nb_lines=0):
         if nb_lines <= 0:
             print(fd.read(), end='')
         else:
-            for i in range(nb_lines - 1):
-                print(next(fd))
+            for i in range(nb_lines):
+                l = fd.readline()
+                if not l:
+                    break
+                print(l, end='')
