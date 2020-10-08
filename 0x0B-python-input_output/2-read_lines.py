@@ -10,4 +10,5 @@ def read_lines(filename="", nb_lines=0):
         if nb_lines <= 0:
             print(fd.read(), end='')
         else:
-            print(fd.readline() * nb_lines)
+            for i in range(nb_lines - 1):
+                print(next(fd))
