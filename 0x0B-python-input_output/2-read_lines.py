@@ -11,7 +11,7 @@ def read_lines(filename="", nb_lines=0):
             print(fd.read(), end='')
         else:
             for i in range(nb_lines):
-                l = list(fd.readline())
-                l.pop()
-                l = "".join(l)
-                print(l)
+                l = fd.readline()
+                if not l:
+                    break
+                print(l, end='')
