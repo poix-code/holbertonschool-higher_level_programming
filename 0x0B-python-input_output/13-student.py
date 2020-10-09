@@ -28,4 +28,4 @@ class Student:
         if len(json):
             self.__dict__.clear()
             for i in json:
-                self.__dict__[key] = json[key]
+                self.__dict__[i] = json[i]
