@@ -95,8 +95,12 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the values of the attributes of the class"""
         attr = ['id', 'width', 'height', 'x', 'y']
-        for i in range(len(args)):
-            setattr(self, attr[i], args[i])
+        if args and args[0] is not None:
+            for i in range(len(args)):
+                setattr(self, attr[i], args[i])
+        else:
+            for j in kwargs:
+                setattr(self, j, kwargs[j])
