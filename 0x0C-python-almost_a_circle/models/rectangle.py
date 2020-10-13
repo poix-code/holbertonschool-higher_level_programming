@@ -79,9 +79,11 @@ class Rectangle(Base):
         """Display the rectangle drawed by '#'"""
         if self.__width == 0 or self.__height == 0:
             return ""
+        for y in range(self.__y):
+            print()
         for i in range(self.__height - 1):
-            print('#' * self.__width)
-        print('#' * self.__width, end='')
+            print(' ' * self.__x + '#' * self.__width)
+        print(' ' * self.__x + '#' * self.__width, end='')
         print()
         return ''
 
