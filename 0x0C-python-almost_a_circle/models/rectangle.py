@@ -81,6 +81,6 @@ class Rectangle(Base):
             return ""
         for i in range(self.__height - 1):
             print('#' * self.__width)
-        print('#' * self.__width, end ='')
+        print('#' * self.__width, end='')
         print()
         return ''
