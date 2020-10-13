@@ -96,7 +96,8 @@ class Rectangle(Base):
                                                        self.__height)
 
     def update(self, *args, **kwargs):
-        """Updates the values of the attributes of the class"""
+        """Updates the values of the attributes of the class
+        in the way of key/value"""
         attr = ['id', 'width', 'height', 'x', 'y']
         if args and args[0] is not None:
             for i in range(len(args)):
