@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        Base.__init__(self, id)
+        super().__init__(id)
 
     @property
     def width(self):
