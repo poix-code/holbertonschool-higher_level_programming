@@ -34,3 +34,10 @@ class Base:
                 ls.append(instance.to_dictionary())
         with open(filename, mode="w", encoding="utf-8") as f:
             f.write(Base.to_json_string(ls))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """JSON string representation"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
