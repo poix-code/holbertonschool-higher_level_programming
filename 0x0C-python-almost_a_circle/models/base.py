@@ -3,6 +3,7 @@
 Base class of this project
 """
 import json
+import os
 
 
 class Base:
@@ -51,3 +52,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Return a list of instances"""
+        obj = []
+        filename = cls.__name__ + '.json'
+        if not os.path.isfile(filename):
+            return obj
+        with open(filename, mode='r', encoding='utf-8') as f:
+            list_dicts = cls.from_json_string(f.read())
+            for d in list_dicts:
+                obj.append(cls.create(**d))
+            return obj
