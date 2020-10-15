@@ -78,7 +78,7 @@ class Base:
         k = l[0].keys()
         with open(filename, mode='w', newline='', encoding='utf-8') as fd:
             w = csv.DictWriter(fd, fieldnames=k)
-            w.writerheader()
+            w.writeheader()
             w.writerows(l)
 
     @classmethod
