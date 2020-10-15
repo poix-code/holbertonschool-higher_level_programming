@@ -4,6 +4,7 @@ Base class of this project
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -64,4 +65,31 @@ class Base:
             list_dicts = cls.from_json_string(f.read())
             for d in list_dicts:
                 obj.append(cls.create(**d))
+            return obj
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes in CSV"""
+        filename = "{}.csv".format(cls.__name__)
+        l = []
+        if obj:
+            for instance in obj:
+                l.append(instance.to_dictionary())
+        k = l[0].keys()
+        with open(filename, mode='w', newline='', encoding='utf-8') as fd:
+            w = csv.DictWriter(fd, fieldnames=k)
+            w.writerheader()
+            w.writerows(l)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes in CSV"""
+        filename = cls.__name__ + '.csv'
+        obj = []
+        if not os.path.isfile(filename):
+            return obj
+        with open(filename, mode='r', encoding='utf-8') as fd:
+            dicts = cls.from_json_string(fd.read())
+            for i in dicts:
+                obj.append(cls.create(**i))
             return obj
