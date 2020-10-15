@@ -70,16 +70,10 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes in CSV"""
-        filename = "{}.csv".format(cls.__name__)
-        l = []
-        if obj:
-            for instance in obj:
-                l.append(instance.to_dictionary())
-        k = l[0].keys()
-        with open(filename, mode='w', newline='', encoding='utf-8') as fd:
-            w = csv.DictWriter(fd, fieldnames=k)
-            w.writeheader()
-            w.writerows(l)
+        filename = cls.__name__ + '.csv'
+        dicts = [obj.to_dictionary() for obj in list_objs]
+        with open(filename, mode='w', encoding='utf-8') as file:
+            file.write(cls.to_json_string(list_dicts))
 
     @classmethod
     def load_from_file_csv(cls):
