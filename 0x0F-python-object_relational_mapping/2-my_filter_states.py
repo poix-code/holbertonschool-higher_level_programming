@@ -1,4 +1,4 @@
-B#!/usr/bin/python3
+#!/usr/bin/python3
 """Filter by user input"""
 
 if __name__ == '__main__':
