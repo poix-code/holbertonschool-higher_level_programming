@@ -1,4 +1,3 @@
 #!/bin/bash
 # Displays the size of the body of a give URL
-URL="$1"
-curl -sI $URL | grep -i Content-Length | awk '{print $2}'
+curl -soI "$1" -w '%{size_download}\n'
