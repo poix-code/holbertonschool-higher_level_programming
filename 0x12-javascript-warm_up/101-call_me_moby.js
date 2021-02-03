@@ -1,6 +1,6 @@
 #!/usr/bin/node
-exports.callMeMoby = function (x, xtimes) {
+exports.callMeMoby = function (x, theFunction) {
   for (let i = 0; i < x; i++) {
-    xtimes();
+    theFunction();
   }
 };
